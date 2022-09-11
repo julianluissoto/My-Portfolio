@@ -14,7 +14,7 @@ const Box = styled.div`
 
   background-color: ${props=>props.theme.body};
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   position: relative;
   display: flex;
   justify-content:space-evenly;
@@ -84,6 +84,7 @@ const MySkills = () => {
         <SocialIcons theme={'light'}/>
         <Logo theme={'light'}/>
         <ParticlesComponent  theme={'light'}/>
+
             <Main>
                <ImDisplay style={{fontSize:'2rem', marginRight:'2rem'}}/>
         
@@ -137,6 +138,7 @@ const MySkills = () => {
              </Main>
       
         </Box>
+        <h1 style={{position:'absolute', zIndex:'1', fontSize:'200px', bottom:'0', opacity:0.1, right:'50px'}} >My skills</h1>
     </ThemeProvider>
   )
 }

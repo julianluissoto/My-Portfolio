@@ -1,0 +1,391 @@
+@media only screen and (max-width: 576px) {
+    .ferrisWheel {
+        display: none;
+
+    }
+}
+
+@media only screen and (min-width: 576px) {}
+
+.ferrisWheelInner {
+    position: relative;
+    cursor: pointer;
+
+}
+
+
+
+
+
+.ferrisWheelInner:hover {
+    filter: saturate(150%);
+
+}
+
+
+.ferrisWheelImage {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 20px;
+
+}
+
+.ferrisWheelImageSmall {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 20px;
+
+}
+
+.ferrisWheelImageSmall {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 10px;
+
+}
+
+
+
+
+.ferrisWheelList {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: ferrisWheelListSpin 140s infinite linear;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, -50%) rotate(0);
+}
+
+
+
+.ferrisWheelList:hover,
+.ferrisWheelList:focus-within {
+    animation-play-state: paused;
+}
+
+@keyframes ferrisWheelListSpin {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.ferrisWheelItem {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    padding-bottom: 7rem;
+    transform-origin: center bottom;
+}
+
+.ferrisWheelItemSmall {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    padding-bottom: 10px;
+    transform-origin: center bottom;
+}
+
+.ferrisWheelItem:nth-child(1) {
+    transform: translate(-50%, 0) rotate(45deg);
+}
+
+.ferrisWheelItem:nth-child(2) {
+    transform: translate(-50%, 0) rotate(90deg);
+}
+
+.ferrisWheelItem:nth-child(3) {
+    transform: translate(-50%, 0) rotate(135deg);
+}
+
+.ferrisWheelItem:nth-child(4) {
+    transform: translate(-50%, 0) rotate(180deg);
+}
+
+.ferrisWheelItem:nth-child(5) {
+    transform: translate(-50%, 0) rotate(225deg);
+}
+
+.ferrisWheelItem:nth-child(6) {
+    transform: translate(-50%, 0) rotate(270deg);
+}
+
+.ferrisWheelItem:nth-child(7) {
+    transform: translate(-50%, 0) rotate(315deg);
+}
+
+.ferrisWheelItem:nth-child(8) {
+    transform: translate(-50%, 0) rotate(360deg);
+}
+
+.ferrisWheelItemPivot {
+    animation: ferrisWheelItemPivotSpin 140s infinite linear;
+}
+
+.ferrisWheelList:hover .ferrisWheelItemPivot,
+.ferrisWheelList:focus-within .ferrisWheelItemPivot {
+    animation-play-state: paused;
+}
+
+@keyframes ferrisWheelItemPivotSpin {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.ferrisWheelItemInner {
+    animation: ferrisWheelItemInnerBoom 2s infinite;
+    cursor: pointer;
+}
+
+.ferrisWheelItem:nth-child(1) .ferrisWheelItemInner {
+    animation-delay: 0.3s;
+}
+
+.ferrisWheelItem:nth-child(2) .ferrisWheelItemInner {
+    animation-delay: 0.5s;
+}
+
+.ferrisWheelItem:nth-child(3) .ferrisWheelItemInner {
+    animation-delay: 0.2s;
+}
+
+.ferrisWheelItem:nth-child(4) .ferrisWheelItemInner {
+    animation-delay: 0.45s;
+}
+
+.ferrisWheelItem:nth-child(5) .ferrisWheelItemInner {
+    animation-delay: 0.05s;
+}
+
+.ferrisWheelItem:nth-child(6) .ferrisWheelItemInner {
+    animation-delay: 0.45s;
+}
+
+.ferrisWheelItem:nth-child(7) .ferrisWheelItemInner {
+    animation-delay: 0.15s;
+}
+
+.ferrisWheelItem:nth-child(8) .ferrisWheelItemInner {
+    animation-delay: 0.05s;
+}
+
+.ferrisWheelItem:nth-child(9) .ferrisWheelItemInner {
+    animation-delay: 0.3s;
+}
+
+@keyframes ferrisWheelItemInnerBoom {
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.ferrisWheelLink {
+    width: 5rem;
+    position: relative;
+    align-items: center;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: rgba(0, 0, 0, .7);
+    display: grid;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background 200ms;
+}
+
+.ferrisWheelLinkSmall {
+    width: 2rem;
+    position: relative;
+    align-items: center;
+    aspect-ratio: 2;
+    border-radius: 50%;
+    color: rgba(0, 0, 0, .7);
+    display: grid;
+    padding: 0.10rem 0.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background 200ms;
+}
+
+
+.ferrisWheelItem:nth-child(1) .ferrisWheelLink {
+    background: #111010b9;
+    opacity: 0.8;
+}
+
+.ferrisWheelItem:nth-child(1) .ferrisWheelLink:hover,
+.ferrisWheelItem:nth-child(1) .ferrisWheelLink:focus {
+    background: #05e2f7;
+}
+
+.ferrisWheelItem:nth-child(2) .ferrisWheelLink {
+    background: #111010b9;
+    opacity: 0.8;
+
+}
+
+.ferrisWheelItem:nth-child(2) .ferrisWheelLink:hover,
+.ferrisWheelItem:nth-child(2) .ferrisWheelLink:focus {
+    background: #98ab03;
+}
+
+.ferrisWheelItem:nth-child(3) .ferrisWheelLink {
+    background: #111010b9;
+    opacity: 0.8;
+
+}
+
+.ferrisWheelItem:nth-child(3) .ferrisWheelLink:hover,
+.ferrisWheelItem:nth-child(3) .ferrisWheelLink:focus {
+    background: #9370cb;
+}
+
+.ferrisWheelItem:nth-child(4) .ferrisWheelLink {
+    background: #111010b9;
+    opacity: 0.8;
+}
+
+.ferrisWheelItem:nth-child(4) .ferrisWheelLink:hover,
+.ferrisWheelItem:nth-child(4) .ferrisWheelLink:focus {
+    background: #8bb1d2;
+}
+
+.ferrisWheelItem:nth-child(5) .ferrisWheelLink {
+    background: #111010b9;
+    opacity: 0.8;
+}
+
+.ferrisWheelItem:nth-child(5) .ferrisWheelLink:hover,
+.ferrisWheelItem:nth-child(5) .ferrisWheelLink:focus {
+    background: #336791;
+}
+
+.ferrisWheelItem:nth-child(6) .ferrisWheelLink {
+    background: #111010b9;
+    opacity: 0.8;
+
+}
+
+.ferrisWheelItem:nth-child(6) .ferrisWheelLink:hover,
+.ferrisWheelItem:nth-child(6) .ferrisWheelLink:focus {
+    background: #68a063;
+}
+
+.ferrisWheelItem:nth-child(7) .ferrisWheelLink {
+    background: #111010b9;
+    opacity: 0.8;
+
+}
+
+.ferrisWheelItem:nth-child(7) .ferrisWheelLink:hover,
+.ferrisWheelItem:nth-child(7) .ferrisWheelLink:focus {
+    background: #f06529;
+}
+
+.ferrisWheelItem:nth-child(8) .ferrisWheelLink {
+    background: #111010b9;
+    opacity: 0.8;
+}
+
+.ferrisWheelItem:nth-child(8) .ferrisWheelLink:hover,
+.ferrisWheelItem:nth-child(8) .ferrisWheelLink:focus {
+    background: #a299ed;
+}
+
+.ferrisWheelItem:nth-child(1) .ferrisWheelLink {
+    transform: rotate(-45deg);
+}
+
+.ferrisWheelItem:nth-child(2) .ferrisWheelLink {
+    transform: rotate(-90deg);
+}
+
+.ferrisWheelItem:nth-child(3) .ferrisWheelLink {
+    transform: rotate(-135deg);
+}
+
+.ferrisWheelItem:nth-child(4) .ferrisWheelLink {
+    transform: rotate(-180deg);
+}
+
+.ferrisWheelItem:nth-child(5) .ferrisWheelLink {
+    transform: rotate(-225deg);
+}
+
+.ferrisWheelItem:nth-child(6) .ferrisWheelLink {
+    transform: rotate(-270deg);
+}
+
+.ferrisWheelItem:nth-child(7) .ferrisWheelLink {
+    transform: rotate(-315deg);
+}
+
+.ferrisWheelIcon {
+    position: absolute;
+    color: rgba(0, 0, 0, .9);
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    transform: translate(-50%, -50%) scale(1);
+    /* transition: opacity 200ms, visibility 200ms, transform 200ms; */
+}
+
+.ferrisWheelIconSmall {
+    position: absolute;
+    color: rgba(0, 0, 0, .9);
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    transform: translate(-50%, -50%) scale(1);
+    /* transition: opacity 200ms, visibility 200ms, transform 200ms; */
+}
+
+.ferrisWheelLink:hover .ferrisWheelIcon,
+.ferrisWheelLink:focus .ferrisWheelIcon {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.85);
+}
+
+.ferrisWheelLabel {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(10, 10, 10);
+
+    visibility: hidden;
+    transform: scale(0.6);
+
+    transition: visibility 200ms, transform 200ms;
+}
+
+.ferrisWheelLink:hover .ferrisWheelLabel,
+.ferrisWheelLink:focus .ferrisWheelLabel {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.2);
+}
+
+
+
+
+
+.ferrisWheelIcon {
+    font-family: '
+ Material Icons'
+ color;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: '
+ liga'
+;
+}

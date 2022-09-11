@@ -12,6 +12,7 @@ width: 55vw;
 height:45vh;
 display: flex;
 
+
 background: linear-gradient(
     to right,
     ${props => props.theme.body} 50%,
@@ -23,7 +24,7 @@ background: linear-gradient(
     background-repeat: no-repeat;
     background-size: 100% 2px;
     border-left: 2px solid ${props => props.theme.body};
-    border-right: 2px solid;
+    border-right: 2px solid #420202;
     z-index:1;
   
 

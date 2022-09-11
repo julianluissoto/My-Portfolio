@@ -16,7 +16,7 @@ const rotate = keyframes`
 const Power = styled.button`
     animation: ${rotate} 10s linear infinite;
     position:fixed;
-    top: 2rem;
+    top: 1.5rem;
     left: 50%;
     transform: translate(-50%,0);
     background-color: #FCF6F4;

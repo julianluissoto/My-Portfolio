@@ -19,7 +19,7 @@ const Power = styled.button`
     top: 1.5rem;
     left: 50%;
     transform: translate(-50%,0);
-    background-color: #FCF6F4;
+    background-color: transparent;
     padding: 0.3rem;
     border-radius: 50%;
     border:none;

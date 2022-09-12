@@ -41,9 +41,9 @@ transform: rotate(-90deg) translate(-50%, -50%);
 `
  const CenterLogo = styled.div`
  position: absolute;
-top: ${props=>props.click?'75%':'40%'};
-right: ${props=>props.click?'8%':'45%'};
-@media only screen and (max-width: 640px) {
+ top: ${props=>props.click?'75%':'40%'};
+ right: ${props=>props.click?'8%':'45%'};
+ @media only screen and (max-width: 640px) {
     display:none
     
 }
@@ -190,7 +190,7 @@ return (
     </div>
     </div>
     </CenterLogo>
-      <Resume target={'_blank'} to= {{pathname:'https://drive.google.com/file/d/1nsjgNiUQHe8Ei2B1_oY2ZV5B0kgadu0n/view?usp=sharing'}} >
+      <Resume target={'_blank'} to= {{pathname:'https://drive.google.com/file/d/1BvZ8uCeykp09w6WNI9aPzut7w3sPiHJV/view?usp=sharing'}} >
   <motion.h3
    whileHover={{scale:1.2}}
     whileTap={{scale:0.9}}>  

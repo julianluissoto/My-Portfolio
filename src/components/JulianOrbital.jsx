@@ -3,7 +3,7 @@ import "./main.css"
 import {SiReact, SiRedux,SiSequelize,SiPostgresql, SiNodedotjs, SiHtml5, SiTailwindcss} from 'react-icons/si'
 import {TbBrandJavascript} from "react-icons/tb"
 
-const JulianOrbital = () => {
+const JulianOrbital = ({backgroundColor}) => {
   return (
     <div style={{position:'absolute'}} >
 <div className="ferrisWheel">
@@ -12,7 +12,7 @@ const JulianOrbital = () => {
       
      
       <ol className="ferrisWheelList" >
-        <li className="ferrisWheelItem"  >
+        <li className="ferrisWheelItem  "  >
           <div className="ferrisWheelItemPivot">
             <div className="ferrisWheelItemInner" >
               <a className="ferrisWheelLink" target={'_blank'} href="https://www.linkedin.com/in/julian-soto-dev/" rel="noreferrer">

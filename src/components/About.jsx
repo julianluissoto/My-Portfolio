@@ -19,21 +19,20 @@ const Container = styled.div`
  
 `
 
-
 const floatingEffect = keyframes`
   0% {transform: translateY(-10px)}
  
  50% {transform: translateY(20px) translateX(30px)}
   
   100% {transform: translateY(-10px)}
+  `
 
-
-`
 const MeFloating = styled.div`
   position: absolute;
   bottom:50%;
   right:25%;
   animation: ${floatingEffect} 7s ease infinite;
+  
 `
 const AboutInfo = styled.div`
    border: 2px solid ${(props) => props.theme.text};
@@ -57,6 +56,9 @@ const AboutInfo = styled.div`
 `
 
 const About = () => {
+ 
+    
+
   return (
     <ThemeProvider theme={darkTheme} >
        <Container>
@@ -67,7 +69,7 @@ const About = () => {
        
        <MeFloating>
 
-       <JulianOrbital/>
+       <JulianOrbital backgroundColor = 'dark'/>
        </MeFloating>
        
        <AboutInfo>

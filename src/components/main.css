@@ -201,7 +201,7 @@
     align-items: center;
     aspect-ratio: 2;
     border-radius: 50%;
-    color: rgba(0, 0, 0, .7);
+    color: rgba(0, 0, 0, .8);
     display: grid;
     padding: 0.10rem 0.2rem;
     text-align: center;
@@ -211,8 +211,8 @@
 
 
 .ferrisWheelItem:nth-child(1) .ferrisWheelLink {
-    background: #111010b9;
-    opacity: 0.8;
+    background: #363131b9;
+    opacity: 1
 }
 
 .ferrisWheelItem:nth-child(1) .ferrisWheelLink:hover,
@@ -221,7 +221,7 @@
 }
 
 .ferrisWheelItem:nth-child(2) .ferrisWheelLink {
-    background: #111010b9;
+    background: #363131b9;
     opacity: 0.8;
 
 }
@@ -232,7 +232,7 @@
 }
 
 .ferrisWheelItem:nth-child(3) .ferrisWheelLink {
-    background: #111010b9;
+    background: #363131b9;
     opacity: 0.8;
 
 }
@@ -243,7 +243,8 @@
 }
 
 .ferrisWheelItem:nth-child(4) .ferrisWheelLink {
-    background: #111010b9;
+    background: #363131b9;
+    ;
     opacity: 0.8;
 }
 
@@ -253,7 +254,7 @@
 }
 
 .ferrisWheelItem:nth-child(5) .ferrisWheelLink {
-    background: #111010b9;
+    background: #363131b9;
     opacity: 0.8;
 }
 
@@ -263,7 +264,7 @@
 }
 
 .ferrisWheelItem:nth-child(6) .ferrisWheelLink {
-    background: #111010b9;
+    background: #363131b9;
     opacity: 0.8;
 
 }
@@ -274,7 +275,7 @@
 }
 
 .ferrisWheelItem:nth-child(7) .ferrisWheelLink {
-    background: #111010b9;
+    background: #363131b9;
     opacity: 0.8;
 
 }
@@ -285,7 +286,7 @@
 }
 
 .ferrisWheelItem:nth-child(8) .ferrisWheelLink {
-    background: #111010b9;
+    background: #363131b9;
     opacity: 0.8;
 }
 

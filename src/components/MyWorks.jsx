@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useEffect,useRef}from 'react'
 import styled, {  ThemeProvider } from 'styled-components'
 import { darkTheme, lightTheme} from './Themes'
 import {motion} from 'framer-motion';
@@ -16,7 +16,7 @@ const Container = styled.div`
   overflow:hidden;
  
 `
-const Main = styled(motion.ul)`
+const CardsContainer = styled(motion.ul)`
 position: fixed;
 top: 12rem;
 left:calc(10rem + 15vw);
@@ -25,7 +25,26 @@ display: flex;
 color:white;
 `
 
+
 const MyWorks = () => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    let element = ref.current;
+   
+    const rotate = () => {
+      
+     element.style.transform = `translateX(${-window.pageYOffset}px)`
+  
+    }
+    
+  
+    window.addEventListener('scroll', rotate)
+    return () => {
+      window.removeEventListener('scroll', rotate);
+      
+    }
+  }, [])
  
      
  
@@ -36,13 +55,13 @@ const MyWorks = () => {
           <SocialIcons theme={'dark'}/>
           <PowerButton/>
 
-          <Main  initial='hidden' animate='show'  >
+          <CardsContainer  initial='hidden' animate='show'  >
          {
             Work.map( d => 
             <Card key={d.id} data={d} />
             )
          }
-     </Main>
+     </CardsContainer>
    
   
 

@@ -190,14 +190,14 @@ return (
     </div>
     </div>
     </CenterLogo>
-      <Resume target={'_blank'} to= {{pathname:'https://drive.google.com/file/d/1BvZ8uCeykp09w6WNI9aPzut7w3sPiHJV/view?usp=sharing'}} >
+      <Resume target={'_blank'} to= {{pathname:'https://drive.google.com/file/d/1Ae7qkhIfYJirP-k9z8iR17nWsDJMXmC9/view?usp=sharing'}} >
   <motion.h3
    whileHover={{scale:1.2}}
     whileTap={{scale:0.9}}>  
    Resume
   </motion.h3>
  </Resume>
-      <Work target={'_blank'} to= {'/work'} click={click}>
+      <Work  to= {'/work'} click={click}>
   <motion.h3
   whileHover={{scale:1.2}}
   whileTap={{scale:0.9}}
@@ -209,7 +209,7 @@ return (
 
       <BottomBar>
 
-<     About target={'_blank'} to= {'/about'} click={click} >
+<     About  to= {'/about'} click={click} >
         <motion.h3
          whileHover={{scale:1.2}}
          whileTap={{scale:0.9}}>
@@ -217,7 +217,7 @@ return (
         </motion.h3>
 
       </About>
-      <MySkills target={'_blank'} to= {'/skills'} >
+      <MySkills  to= {'/skills'} >
         <motion.h3
          whileHover={{scale:1.2}}
          whileTap={{scale:0.9}}>

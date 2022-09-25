@@ -8,6 +8,7 @@ import {BiServer} from 'react-icons/bi'
 import {ImDisplay} from 'react-icons/im'
 
 import ParticlesComponent from '../SmallComponents/ParticlesComponent'
+import PageTitle from '../SmallComponents/PageTitle'
 
 
 const Box = styled.div`
@@ -136,9 +137,9 @@ const MySkills = () => {
      
      
              </Main>
-      
+      <PageTitle text='My Skills' top='80%' right = '10%'  />
         </Box>
-        <h1 style={{position:'absolute', zIndex:'1', fontSize:'200px', bottom:'0', opacity:0.1, right:'50px'}} >My skills</h1>
+        
     </ThemeProvider>
   )
 }

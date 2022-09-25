@@ -7,6 +7,8 @@ import Logo from '../SmallComponents/Logo'
 import SocialIcons from '../SmallComponents/SocialIcons'
 import { Work } from '../data/WorkData'
 import Card from '../SmallComponents/Card';
+import {BsGearWideConnected} from 'react-icons/bs'
+import PageTitle from '../SmallComponents/PageTitle';
 
 
 const Box = styled.div`
@@ -28,12 +30,13 @@ color:white;
 const Rotate = styled.span`
 display:block;
 position: fixed;
-right:1rem;
-bottom: 1rem;
-width: 80px;
-height: 80px;
+right:2rem;
+bottom: 2rem;
 z-index:1;
 `
+
+
+
 
 
 // Framer-motion Configuration
@@ -54,7 +57,7 @@ const container = {
 const WorkPage = () => {
 
     const ref = useRef(null);
-    
+    const gear = useRef(null)
 
 
 
@@ -64,13 +67,14 @@ const WorkPage = () => {
         const rotate = () => {
          
          element.style.transform = `translateX(${-window.pageYOffset}px)`
+
+          gear.current.style.transform = `rotate(` + -window.pageYOffset + 'deg)'
         }
     
         window.addEventListener('scroll', rotate)
-        return () => {
-          window.removeEventListener('scroll', rotate);
+        return () =>  window.removeEventListener('scroll', rotate);
           
-        }
+        
       }, [])
 
 
@@ -89,9 +93,13 @@ const WorkPage = () => {
             )
          }
      </Main>
+<Rotate>
+  <div ref={gear}><BsGearWideConnected   style={{fill:`${darkTheme.text}`, width:'100px', height:'100px'}}/></div>
 
-
+</Rotate>
+     <PageTitle text='My Work' top='10%' right = '10%' />
         </Box>
+      
 
         </ThemeProvider>
         

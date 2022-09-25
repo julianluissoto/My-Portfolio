@@ -7,6 +7,7 @@ import SocialIcons from '../SmallComponents/SocialIcons'
 
 import ParticlesComponent from '../SmallComponents/ParticlesComponent'
 import JulianOrbital from './JulianOrbital'
+import PageTitle from '../SmallComponents/PageTitle'
 
 
 
@@ -81,6 +82,7 @@ I believe that the good experience of the user is primordial, it's what make the
 
 
        </AboutInfo>
+       <PageTitle text= 'About' top='20%' right = '10%'  />
             </Container>
 
     </ThemeProvider>

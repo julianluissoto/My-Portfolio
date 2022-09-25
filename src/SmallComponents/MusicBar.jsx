@@ -73,7 +73,7 @@ else{
       <Line click={click}/>
       <Line click={click}/>
       <Line click={click}/>
-      <img style={{height:'80x', top:'-3rem', left:'2rem', position:'absolute'}}  src={click?dancerMoving:dancerStatic} alt="" />
+      <img style={{height:'90px', top:'-3rem', left:'2rem', position:'absolute'}}  src={click?dancerMoving:dancerStatic} alt="" />
         <audio src={music} ref={ref} loop />
         
         

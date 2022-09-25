@@ -69,7 +69,7 @@ const About = () => {
        
        <MeFloating>
 
-       <JulianOrbital backgroundColor = 'dark'/>
+       <JulianOrbital/>
        </MeFloating>
        
        <AboutInfo>

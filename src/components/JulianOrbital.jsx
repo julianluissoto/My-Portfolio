@@ -3,7 +3,7 @@ import "./main.css"
 import {SiReact, SiRedux,SiSequelize,SiPostgresql, SiNodedotjs, SiHtml5, SiTailwindcss} from 'react-icons/si'
 import {TbBrandJavascript} from "react-icons/tb"
 
-const JulianOrbital = ({backgroundColor}) => {
+const JulianOrbital = () => {
   return (
     <div style={{position:'absolute'}} >
 <div className="ferrisWheel">

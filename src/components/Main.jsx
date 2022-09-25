@@ -102,7 +102,7 @@ return (
 
 <div className="ferrisWheel">
     <div className="ferrisWheelInner">
-      <img className= {click?"ferrisWheelImageSmall":"ferrisWheelImage"}    ferrisWheelImageSmall  alt="Julian Soto Dev" src="https://i.postimg.cc/wTNScdTJ/Screenshot-20220815-121809-Gallery.jpg" />
+      <img className= {click?"ferrisWheelImageSmall":"ferrisWheelImage"}     alt="Julian Soto Dev" src="https://i.postimg.cc/wTNScdTJ/Screenshot-20220815-121809-Gallery.jpg" />
       
       {click?'':<h2 style={{display:'flex', justifyContent:"center", fontWeight:'bold'}}>Lets Go</h2>}
       <ol className="ferrisWheelList" >
@@ -110,7 +110,7 @@ return (
           <div className="ferrisWheelItemPivot">
             <div className="ferrisWheelItemInner" >
               <a className={click?"ferrisWheelLinkSmall":"ferrisWheelLink"} target={'_blank'} href="https://www.linkedin.com/in/julian-soto-dev/" rel="noreferrer">
-                <SiReact className= {click?"ferrisWheelIconSmall":"ferrisWheelIcon"}   ferrisWheelIconSmall />
+                <SiReact className= {click?"ferrisWheelIconSmall":"ferrisWheelIcon"} />
                 <span className="ferrisWheelLabel">React</span>
               </a>
             </div>

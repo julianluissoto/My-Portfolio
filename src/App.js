@@ -14,6 +14,7 @@ import Contact from "./components/Contact"
 import About from "./components/About"
 import { AnimatePresence } from "framer-motion"
 import MusicBar from "./SmallComponents/MusicBar"
+
 //const LazyAbout = React.lazy(()=>import('./components/About'))
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
   return <>
   <GlobalStyle/>
   <ThemeProvider theme={lightTheme} >
+    
     <MusicBar/>
 <AnimatePresence exitBeforeEnter >
 

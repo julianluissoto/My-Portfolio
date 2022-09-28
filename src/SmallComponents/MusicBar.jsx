@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components'
 import music from '../assets/audio/u-said-it-v13-1167.mp3'
 import dancerMoving from '../assets/Images/dancer.gif'
 import dancerStatic from '../assets/Images/dancer-static.png'
-
+import {AiFillSound} from 'react-icons/ai'
 const Container = styled.div`
   display: flex;
   cursor: pointer;
@@ -68,12 +68,13 @@ else{
   return (
     <>
     <Container onClick={handleMusic}>
+    <AiFillSound style={{width:'1.5rem', height:'1.5rem'}}/>
       <Line click={click}/>
       <Line click={click}/>
       <Line click={click}/>
       <Line click={click}/>
-      <Line click={click}/>
-      <img style={{height:'90px', top:'-3rem', left:'2rem', position:'absolute'}}  src={click?dancerMoving:dancerStatic} alt="" />
+      <Line click={click} />
+      <img style={{height:'90px', top:'-3rem', left:'3rem', position:'absolute'}}  src={click?dancerMoving:dancerStatic} alt="" />
         <audio src={music} ref={ref} loop />
         
         

@@ -192,7 +192,8 @@ return (
     </div>
     </div>
     </CenterLogo>
-      <Resume target={'_blank'} to= {{pathname:'https://drive.google.com/file/d/1Ae7qkhIfYJirP-k9z8iR17nWsDJMXmC9/view?usp=sharing'}} >
+      <Resume 
+      target={'_blank'} to= {{pathname:'https://drive.google.com/file/d/1urfMFgqjn2R6K8bX0-uG-dOc2tvczSjs/view?usp=sharing'}}>
   <motion.h3
    whileHover={{scale:1.2}}
     whileTap={{scale:0.9}}>  

@@ -9,6 +9,8 @@ import { NavLink } from 'react-router-dom'
 import "./main.css"
 import Intro from './Intro'
 import {motion} from 'framer-motion'
+import { lightTheme} from './Themes'
+import {BsGearWideConnected} from 'react-icons/bs'
 
 const MainContainer = styled.div`
     background-color: ${props => props.theme.body};
@@ -102,8 +104,8 @@ return (
 
 <div className="ferrisWheel">
     <div className="ferrisWheelInner">
-      <img className= {click?"ferrisWheelImageSmall":"ferrisWheelImage"}     alt="Julian Soto Dev" src="https://i.postimg.cc/wTNScdTJ/Screenshot-20220815-121809-Gallery.jpg" />
-      
+     {/*  <img className= {click?"ferrisWheelImageSmall":"ferrisWheelImage"}     alt="Julian Soto Dev" src="https://i.postimg.cc/wTNScdTJ/Screenshot-20220815-121809-Gallery.jpg" /> */}
+      <BsGearWideConnected  className={click?"ferrisWheelImageSmall":"ferrisWheelImage"} /* style={{fill:`${lightTheme.text}`, width:'100px', height:'100px'}} *//>
       {click?'':<h2 style={{display:'flex', justifyContent:"center", fontWeight:'bold'}}>Lets Go</h2>}
       <ol className="ferrisWheelList" >
         <li className="ferrisWheelItem"  >

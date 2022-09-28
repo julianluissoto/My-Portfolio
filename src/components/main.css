@@ -27,7 +27,13 @@
     width: 8rem;
     height: 8rem;
     border-radius: 20px;
+    animation: gearImageSpin 10s infinite linear
+}
 
+@keyframes gearImageSpin {
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 .ferrisWheelImageSmall {

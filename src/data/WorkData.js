@@ -2,7 +2,7 @@ export const Work = [
     {
         id:1,
         name:"Dogs Breed App",
-        description:"It is build on top of the React and Redux for the Frontend, with pure Css and Express together with PostgreSQL for backend and Database",
+        description:"It is build on top of the React and Redux for the Frontend, with pure Cs, Express and PostgreSQL for backend and Database",
         tags:["React",'NodeJS',"Express","PostgreSQL",'Sequelize'],
         
         demo:"https://pi-dogs-henry-ashen.vercel.app/",
@@ -11,7 +11,7 @@ export const Work = [
     {
         id:2,
         name:"Nft's MarketPlace",
-        description:"E-commerce where you can create, buy and sell Nft that are unique. It's build with React, Redux, Tailwind,  NodeJS , Posgres among othr technologies. Also implement Auth0, cloudinary and Stripe",
+        description:"E-commerce where you can create, buy and sell Nft that are unique. It's build with React, Redux, Tailwind,  NodeJS , Posgres among othr technologies. I Also implement Auth0, cloudinary and Stripe",
         tags:["React","Tailwind",'NodeJS',"Express","PostgreSQL",'Sequelize','Auth0', 'Stripe'],
         
         demo:"https://mar-abierto-marketplace.vercel.app/",
@@ -22,7 +22,7 @@ export const Work = [
     {
         id:3,
         name:"Porfolio",
-        description:"E-commerce where you can create, buy and sell Nft that are unique. It's build with React, Redux, Tailwind,  NodeJS and ProgreSQL. Also implement Auth0, cloudinary and Stripe",
+        description:"Created with React, Framer-motion and Styled-Components",
         tags:["React","Styled-Components", 'Framer-Motion'],
         
         demo:"https://julian-soto-dev.vercel.app/",

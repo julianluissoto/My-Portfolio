@@ -94,7 +94,7 @@ const WorkPage = () => {
          }
      </Main>
 <Rotate>
-  <div ref={gear}><BsGearWideConnected   style={{fill:`${darkTheme.text}`, width:'100px', height:'100px'}}/></div>
+  <div ><BsGearWideConnected   style={{fill:`${darkTheme.text}`, width:'100px', height:'100px'}}/></div>
 
 </Rotate>
      <PageTitle text='My Work' top='10%' right = '10%' />

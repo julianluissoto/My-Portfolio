@@ -5,13 +5,51 @@
     }
 }
 
-@media only screen and (min-width: 576px) {}
+
 
 .ferrisWheelInner {
     position: relative;
     cursor: pointer;
 
 }
+
+@media only screen and (max-width:800px) {
+    .ferrisWheelInner {
+
+        display: none;
+
+    }
+
+
+
+    .showRotate {
+        animation: gearImageSpin2 10s infinite linear;
+        display: inline-block;
+
+        position: fixed;
+
+
+    }
+
+}
+
+@keyframes gearImageSpin2 {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@media only screen and (min-width:800px) {
+    .showRotate {
+        display: none;
+    }
+
+}
+
+
+
+
+
 
 
 

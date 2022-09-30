@@ -40,15 +40,25 @@ transform: rotate(90deg) translate(-50%, -50%);
 text-decoration: none;
 transform: rotate(-90deg) translate(-50%, -50%);
  z-index: 1;
+ @media only screen and (max-width: 50em) {
+    text-shadow: ${(props) => (props.click ? "0 0 4px #000" : "none")};
+  }
 `
  const CenterLogo = styled.div`
  position: absolute;
  top: ${props=>props.click?'75%':'40%'};
  right: ${props=>props.click?'8%':'45%'};
- @media only screen and (max-width: 640px) {
-    display:none
-    
-}
+ 
+@media only screen and (max-width: 50em) {
+    top: ${(props) => (props.click ? "90%" : "50%")};
+    left: ${(props) => (props.click ? "90%" : "50%")};
+    width: ${(props) => (props.click ? "80px" : "150px")};
+    height: ${(props) => (props.click ? "80px" : "150px")};
+  }
+  @media only screen and (max-width: 30em) {
+    width: ${(props) => (props.click ? "40px" : "150px")};
+    height: ${(props) => (props.click ? "40px" : "150px")};
+  }
 transition: all 1s ease-out;
 
 ` 
@@ -100,11 +110,23 @@ return (
 			<Container>
 			<PowerButton/>
 			<SocialIcons theme = {click?'dark': 'light'} />
+      <BsGearWideConnected  
+      click={click}  onClick={handleClick}
+      
+      className={"showRotate"} style={{
+        width:`${click ? '50px' : '100px'}`, 
+        cursor:'pointer' , 
+        height:`${click ? '50px' : '100px'}`,
+        top: `${click?'82%':'50%'}`,
+        right: `${click?'6%':'50%'}`,
+        transition: 'all 1s ease-out',
+        transitionDuration: '1s',
+
+        }}/>
+    
       <CenterLogo click={click}  onClick={handleClick}>
 
-<div className="ferrisWheel">
     <div className="ferrisWheelInner">
-     {/*  <img className= {click?"ferrisWheelImageSmall":"ferrisWheelImage"}     alt="Julian Soto Dev" src="https://i.postimg.cc/wTNScdTJ/Screenshot-20220815-121809-Gallery.jpg" /> */}
       <BsGearWideConnected  className={click?"ferrisWheelImageSmall":"ferrisWheelImage"} /* style={{fill:`${lightTheme.text}`, width:'100px', height:'100px'}} *//>
       {click?'':<h2 style={{display:'flex', justifyContent:"center", fontWeight:'bold'}}>Lets Go</h2>}
       <ol className="ferrisWheelList" >
@@ -190,11 +212,20 @@ return (
         </li>
       </ol> 
     </div>
-    </div>
+    
     </CenterLogo>
       <Resume 
       target={'_blank'} to= {{pathname:'https://drive.google.com/file/d/1urfMFgqjn2R6K8bX0-uG-dOc2tvczSjs/view?usp=sharing'}}>
   <motion.h3
+  initial={{
+    y:-200,
+    transition:{type:'spring', duration:1.5, delay:1}
+
+  }}
+  animate={{
+    y:0,
+    transition: {type:'spring', duration:1.5, delay:1}
+  }}
    whileHover={{scale:1.2}}
     whileTap={{scale:0.9}}>  
    Resume
@@ -202,6 +233,18 @@ return (
  </Resume>
       <Work  to= {'/work'} click={click}>
   <motion.h3
+ initial={{
+  y:-200,
+  transition:{type:'spring', duration:1.5, delay:1}
+
+}}
+animate={{
+  y:0,
+  transition: {type:'spring', duration:1.5, delay:1}
+}}
+
+
+
   whileHover={{scale:1.2}}
   whileTap={{scale:0.9}}
   >
@@ -214,6 +257,16 @@ return (
 
 <     About  to= {'/about'} click={click} >
         <motion.h3
+
+initial={{
+  y:200,
+  transition:{type:'spring', duration:1.5, delay:1}
+
+}}
+animate={{
+  y:0,
+  transition: {type:'spring', duration:1.5, delay:1}
+}}
          whileHover={{scale:1.2}}
          whileTap={{scale:0.9}}>
             About
@@ -222,6 +275,16 @@ return (
       </About>
       <MySkills  to= {'/skills'} >
         <motion.h3
+
+initial={{
+  y:200,
+  transition:{type:'spring', duration:1.5, delay:1}
+
+}}
+animate={{
+  y:0,
+  transition: {type:'spring', duration:1.5, delay:1}
+}}
          whileHover={{scale:1.2}}
          whileTap={{scale:0.9}}>
            My Skills

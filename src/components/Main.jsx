@@ -9,8 +9,9 @@ import { NavLink } from 'react-router-dom'
 import "./main.css"
 import Intro from './Intro'
 import {motion} from 'framer-motion'
-import { lightTheme} from './Themes'
+
 import {BsGearWideConnected} from 'react-icons/bs'
+import { mediaQueries } from './Themes';
 
 const MainContainer = styled.div`
     background-color: ${props => props.theme.body};
@@ -18,11 +19,33 @@ const MainContainer = styled.div`
     height: 100vh;
     overflow: hidden;
     position: relative;
-    h2,h3,h4,h5,h6{
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
         font-family: 'karla', sans-serif;
         font-weight: 500;
+        text-shadow:1px 1px 2px #420202
+       
  }
+ h2 {
+    ${mediaQueries(40)`
+      font-size:1.2em;
+      text-shadow:1px 1px 2px #420202
+
+  `};
+
+    ${mediaQueries(30)`
+      font-size:1em;
+
+  `};
+  }
  `
+ const Container = styled.div`
+ padding: 2rem;
+`;
+
  const Resume = styled(NavLink)`
  color: ${props=> props.theme.text};
  position: absolute;
@@ -62,9 +85,7 @@ transform: rotate(-90deg) translate(-50%, -50%);
 transition: all 1s ease-out;
 
 ` 
- const Container = styled.div `
-    padding: 2rem;
-`
+
  const BottomBar = styled.div`
   position: absolute;
   bottom: 1rem;
@@ -95,6 +116,21 @@ const DarkDivContainer = styled.div`
 background-color: #420202;
 transition: height 0.5s ease, width 1s ease 0.5s;
 
+${(props) =>
+    props.click
+      ? mediaQueries(50)`
+       height: 50%;
+  right:0;
+  
+  width: 100%;
+  transition: width 0.5s ease, height 1s ease 0.5s;
+
+  `
+      : mediaQueries(50)`
+       height: 0;
+  
+  width: 0;
+  `};
 `
 
 
@@ -117,8 +153,8 @@ return (
         width:`${click ? '50px' : '100px'}`, 
         cursor:'pointer' , 
         height:`${click ? '50px' : '100px'}`,
-        top: `${click?'82%':'50%'}`,
-        right: `${click?'6%':'50%'}`,
+        top: `${click?'82%':'40%'}`,
+        right: `${click?'6%':'37%'}`,
         transition: 'all 1s ease-out',
         transitionDuration: '1s',
 

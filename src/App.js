@@ -23,7 +23,9 @@ function App() {
   <GlobalStyle/>
   <ThemeProvider theme={lightTheme} >
     
-    <MusicBar/>
+    <MusicBar 
+    
+    />
 <AnimatePresence exitBeforeEnter >
 
 <Switch location={location}  key={location.pathname}  >

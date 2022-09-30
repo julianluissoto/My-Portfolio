@@ -4,12 +4,14 @@ import music from '../assets/audio/u-said-it-v13-1167.mp3'
 import dancerMoving from '../assets/Images/dancer.gif'
 import dancerStatic from '../assets/Images/dancer-static.png'
 import {AiFillSound} from 'react-icons/ai'
+
+
 const Container = styled.div`
   display: flex;
   cursor: pointer;
   position: fixed;
-  left: 8rem;
-  top:3rem;
+  left: 2rem;
+  top:6rem;
   z-index: 10;
   &>*:nth-child(1){
     animation-delay: 0.2s;
@@ -29,7 +31,10 @@ const Container = styled.div`
   &>*:nth-child(6){
     animation-delay: 0.9s;
 }
+
+
   `
+ 
   const play = keyframes`
   0%{
       transform:scaleY(1);
@@ -40,6 +45,8 @@ const Container = styled.div`
   100%{
       transform:scaleY(1);
   }
+  
+
   `
 const Line = styled.span`
   background-color: ${props=>props.theme.text};
@@ -49,6 +56,7 @@ animation-play-state: ${props => props.click ? "running" : "paused"};
 height: 1rem;
 width: 2px;
 margin:0 0.1rem;
+
 `
 
 const MusicBar = () => {
@@ -68,14 +76,18 @@ else{
   return (
     <>
     <Container onClick={handleMusic}>
-    <AiFillSound style={{width:'1.5rem', height:'1.5rem'}}/>
+    <AiFillSound style={{width:'1.5rem', height:'1.5rem',top:'1rem'}}/>
       <Line click={click}/>
       <Line click={click}/>
       <Line click={click}/>
       <Line click={click}/>
       <Line click={click} />
-      <img style={{height:'90px', top:'-3rem', left:'3rem', position:'absolute'}}  src={click?dancerMoving:dancerStatic} alt="" />
-        <audio src={music} ref={ref} loop />
+      
+      <img  style={{height:'90px', right:'2rem', top:'1rem', position:'fixed'}}   src={click?dancerMoving:dancerStatic} alt="" />
+        
+      
+      <audio src={music} ref={ref} loop />
+      
         
         
     </Container>

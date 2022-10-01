@@ -4,21 +4,7 @@ import emailjs from'emailjs-com'
 
 import './contact.css'
 import './loader.css'
-/* const Box = styled.div`
-display: flex;
-background-color: ${props => props.theme.body};
-height:400vh;
-flex-direction: column;
-` */
-/* const Styledform = styled.form`
-display: flex;
- */
-/* background-color: ${props => props.theme.body};
-align-content:space-evenly;
-flex-direction: column;
-width: 200px;
-  height: 200px;
-` */
+
 
 
 const Contactform = () => {
@@ -126,23 +112,4 @@ const renderAlert = () => {
  */
 
 
-  {/* <Box>
-        <h3 >CONTACT ME</h3>
-        {status && renderAlert()} 
-        <Box>
-       
-            <Styledform onSubmit={handleSubmit}>
-        
-                <input   value={values.fullName} onChange={handlechange} label="Full Name" name="fullName" type="text" placeholder="Your name" />
-                <input value={values.email} onChange={handlechange} label="E-Mail" name="email" type="email" placeholder="Your E-mail" />
-        
-                <textarea value={values.message} onChange={handlechange} label="Your message here" name="message" />
-               
-            </Styledform>
-            <button type="submit"
-          
-          >Send
-       </button>
-        </Box>
-       
-    </Box>  */}
+ 

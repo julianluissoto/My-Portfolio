@@ -81,11 +81,11 @@ const Contactform = () => {
 			
 			<div className="right">
 				<h2 className='title'>Contact Me</h2>
-				<input  className='field' value={values.fullName||''} defaultValue='Your name' onChange={handlechange} name="fullName" type="text" placeholder="Your name" />
-				<input className='field' value={values.email||''} defaultValue ='Your E-mail'  onChange={handlechange} name="email" type="email" placeholder="Your E-mail" />
+				<input  className='field' value={values.fullName||''}  onChange={handlechange} name="fullName" type="text" placeholder="Your name" />
+				<input className='field' value={values.email||''}   onChange={handlechange} name="email" type="email" placeholder="Your E-mail" />
 				
 				
-				<textarea className="field" value = {values.message ||''} defaultValue='inital value' onChange={handlechange} placeholder="Your message here" name="message" />
+				<textarea className="field" value = {values.message ||''}  onChange={handlechange} placeholder="Your message here" name="message" />
 				<button type="submit"   className="btn">{values.sending?'Sending':'Send'}</button>
                 {status && renderAlert()}
 			</div>

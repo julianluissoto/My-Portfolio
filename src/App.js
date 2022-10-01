@@ -10,10 +10,11 @@ import Main from './components/Main'
 import BlogPage from "./components/BlogPage"
 import MyWorks from "./components/MyWorks"
 import MySkills from "./components/MySkills"
-import Contact from "./components/Contact"
+
 import About from "./components/About"
 import { AnimatePresence } from "framer-motion"
 import MusicBar from "./SmallComponents/MusicBar"
+import Contactform from "./components/Contactform"
 
 //const LazyAbout = React.lazy(()=>import('./components/About'))
 
@@ -34,7 +35,8 @@ function App() {
   <Route exact path='/blog' component={BlogPage}/>
   <Route exact path='/work' component={MyWorks}/>
   <Route exact path='/skills' component={MySkills}/>
-  <Route exact path='/contact' component={Contact}/>
+  <Route exact path='/contact' component={Contactform}/>
+  
 </Switch>
 </AnimatePresence>
 

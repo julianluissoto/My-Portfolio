@@ -47,7 +47,7 @@ const MainContainer = styled.div`
 `;
 
  const Resume = styled(NavLink)`
- color: ${props=> props.theme.text};
+ color: ${props=> props.theme.body};
  position: absolute;
  top: 50%;
  right: calc(1rem + 2vw);
@@ -251,7 +251,7 @@ return (
     
     </CenterLogo>
       <Resume 
-      target={'_blank'} to= {{pathname:'https://drive.google.com/file/d/1urfMFgqjn2R6K8bX0-uG-dOc2tvczSjs/view?usp=sharing'}}>
+      target={'_blank'} to= {{pathname:'https://drive.google.com/file/d/19dxmTt4vi2KXa7p1lWZ8NHdyFEus-Kbb/view?usp=sharing'}}>
   <motion.h3
   initial={{
     y:-200,

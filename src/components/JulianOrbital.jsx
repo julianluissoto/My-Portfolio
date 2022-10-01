@@ -2,13 +2,34 @@ import React from 'react'
 import "./main.css"
 import {SiReact, SiRedux,SiSequelize,SiPostgresql, SiNodedotjs, SiHtml5, SiTailwindcss} from 'react-icons/si'
 import {TbBrandJavascript} from "react-icons/tb"
+import {BsGearWideConnected} from 'react-icons/bs'
+import styled,{ keyframes } from 'styled-components'
+
+const rotate = keyframes`
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+`;
+const RotateGear = styled.div`
+  display: inline-block;
+  animation: ${rotate} 20s linear infinite;
+  padding: 5px;
+  font-size: 1.2rem;
+`;
+
 
 const JulianOrbital = () => {
   return (
     <div style={{position:'absolute'}} >
 <div className="ferrisWheel">
     <div className="ferrisWheelInner">
-      <img className= "ferrisWheelImage"  alt="Julian Soto Dev" src="https://i.postimg.cc/wTNScdTJ/Screenshot-20220815-121809-Gallery.jpg" />
+      <RotateGear>
+      <BsGearWideConnected style={{fill:'rgb(105,105,105)', height:'100px', width:'100px'}}/>
+      </RotateGear>
+
       
      
       <ol className="ferrisWheelList" >

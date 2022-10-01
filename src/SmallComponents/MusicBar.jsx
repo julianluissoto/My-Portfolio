@@ -10,7 +10,7 @@ const Container = styled.div`
   display: flex;
   cursor: pointer;
   position: fixed;
-  left: 2rem;
+  left: 1rem;
   top:6rem;
   z-index: 10;
   &>*:nth-child(1){
@@ -83,7 +83,7 @@ else{
       <Line click={click}/>
       <Line click={click} />
       
-      <img  style={{height:'90px', right:'2rem', top:'1rem', position:'fixed'}}   src={click?dancerMoving:dancerStatic} alt="" />
+      <img  style={{height:'90px', right:'0.5rem', top:'0.5rem', position:'fixed'}}   src={click?dancerMoving:dancerStatic} alt="dancig-men" />
         
       
       <audio src={music} ref={ref} loop />

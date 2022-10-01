@@ -30,7 +30,7 @@ display: flex;
 const Main = styled(motion.ul)`
 position: fixed;
 top: 12rem;
-left:calc(10rem + 15vw);
+left:calc(40rem + 15vw);
 height: 40vh;
 display: flex;
 color:white;
@@ -116,14 +116,14 @@ const WorkPage = () => {
 
     useEffect(() => {
         let element = ref.current;
-let rackSlide = rack.current
+        let rackSlide = rack.current
         
         const rotate = () => {
          
           element.style.transform = `translateX(${-window.pageYOffset}px)`;
           rackSlide.style.transform = `translateX(${-window.pageYOffset}px)`;
 
-return(gear.current.style.transform = 'rotate(' + -window.pageYOffset + 'deg)')
+          return(gear.current.style.transform = 'rotate(' + -window.pageYOffset + 'deg)')
            
         };
         

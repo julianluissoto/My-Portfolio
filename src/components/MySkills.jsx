@@ -1,6 +1,7 @@
 import React from 'react'
+import { motion } from "framer-motion";
 import styled, { ThemeProvider } from 'styled-components'
-import { lightTheme } from './Themes'
+import { lightTheme,mediaQueries } from './Themes'
 import PowerButton from '../SmallComponents/PowerButton'
 import Logo from '../SmallComponents/Logo'
 import SocialIcons from '../SmallComponents/SocialIcons'
@@ -11,7 +12,7 @@ import ParticlesComponent from '../SmallComponents/ParticlesComponent'
 import PageTitle from '../SmallComponents/PageTitle'
 
 
-const Box = styled.div`
+const Box = styled(motion.div)`
 
   background-color: ${props=>props.theme.body};
   width: 100vw;
@@ -21,9 +22,26 @@ const Box = styled.div`
   justify-content:space-evenly;
   align-items: center;
   
+  ${mediaQueries(50)`
+            flex-direction:column;  
+            padding:8rem 0;
+height:auto;
+            &>*:nth-child(5){
+              margin-bottom:5rem;
+            }
+           
+  `};
+  ${mediaQueries(30)`
+           
+            &>*:nth-child(5){
+              margin-bottom:4rem;
+            }
+           
+  `};
+
   `
 
-const Main = styled.div`
+const Main = styled(motion.div)`
   border: 2px solid ${props=>props.theme.text};
   color:${props=>props.theme.text};
   background-color:${props=>props.theme.body};
@@ -41,17 +59,19 @@ const Main = styled.div`
     color:${props=>props.theme.body};
     transition:all 0.2s ease-in-out
   }
+  ${mediaQueries(60)`
+            height: 55vh;
+  `};
+
+  ${mediaQueries(50)`
+              width: 50vw;
+              height: max-content;
+
+  `};
 
  
 `
-/* const SkillsTitle = styled.h1`
-  color:${props=>props.theme.text};
- margin:60px auto;
- text-align: center;
- display: block;
- font-family:'ubuntu', monospace;
-
-` */
+ 
 const Description = styled.h3`
   color: ${props=>props.theme.text};
   font-size: calc(0.6em + 1vw);
@@ -68,6 +88,25 @@ h2{
     background-color:${props=>props.theme.text};
     color:${props=>props.theme.body};
   }
+
+  ${mediaQueries(50)`
+            font-size: calc(0.8em + 1vw);
+
+  `};
+
+  ${mediaQueries(30)`
+                      font-size:calc(0.7em + 1vw);
+
+              
+
+  `};
+
+  ${mediaQueries(25)`
+                      font-size:calc(0.5em + 1vw);
+
+              
+
+  `};
 
 `
 
@@ -91,7 +130,7 @@ const MySkills = () => {
         
                 <h2>FRONT END</h2>
                 <Description>
-                     description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil voluptatibus perspiciatis dolorem cupiditate 
+                     This is where im strong, i always create simple but functional interfaces so the cliente can access easily where he wants to go.
                      <div>
                 <h2>Technologies</h2>
                 <ul>
@@ -114,7 +153,7 @@ const MySkills = () => {
                   <BiServer  style={{fontSize:'2rem'  ,marginRight:'2rem'}}/>
                    <h2>BACKEND</h2>
                   <Description>
-                       description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil voluptatibus perspiciatis dolorem cupiditate 
+                       Working every day on server side son i can provide to my cliente side the information that i need and on the way i needed.
                        <div>
                   <h2>Technologies</h2>
                 <ul>

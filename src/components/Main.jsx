@@ -3,13 +3,13 @@ import styled from 'styled-components'
 import {SiReact, SiRedux,SiSequelize,SiPostgresql, SiNodedotjs, SiHtml5, SiTailwindcss} from 'react-icons/si'
 import {TbBrandJavascript} from "react-icons/tb"
 import LogoPage from '../SmallComponents/Logo'
-import PowerButton from '../SmallComponents/PowerButton'
+
 import SocialIcons from '../SmallComponents/SocialIcons'
 import { NavLink } from 'react-router-dom'
 import "./main.css"
 import Intro from './Intro'
 import {motion} from 'framer-motion'
-
+import {GrContact} from 'react-icons/gr'
 import {BsGearWideConnected} from 'react-icons/bs'
 import { mediaQueries } from './Themes';
 
@@ -105,6 +105,10 @@ const MySkills = styled(NavLink)`
   color: ${props=> props.click?props.theme.body:props.theme.text};
   z-index: 1;
 `
+const ContactMe = styled(NavLink)`
+  color: ${props=> props.click?props.theme.body:props.theme.text};
+  z-index: 1;
+`
 const DarkDivContainer = styled.div`
   position: absolute;
   top: 0;
@@ -144,7 +148,7 @@ return (
       <DarkDivContainer  click={click}>
       </DarkDivContainer>
 			<Container>
-			<PowerButton/>
+			
 			<SocialIcons theme = {click?'dark': 'light'} />
       <BsGearWideConnected  
       click={click}  onClick={handleClick}
@@ -251,7 +255,7 @@ return (
     
     </CenterLogo>
       <Resume 
-      target={'_blank'} to= {{pathname:'https://drive.google.com/file/d/19dxmTt4vi2KXa7p1lWZ8NHdyFEus-Kbb/view?usp=sharing'}}>
+      target={'_blank'} style={{color:'black'}}  to = {{pathname:'https://drive.google.com/file/d/19dxmTt4vi2KXa7p1lWZ8NHdyFEus-Kbb/view?usp=sharing'}}>
   <motion.h3
   initial={{
     y:-200,
@@ -262,7 +266,7 @@ return (
     y:0,
     transition: {type:'spring', duration:1.5, delay:1}
   }}
-   whileHover={{scale:1.2}}
+   whileHover={{scale:1.3}}
     whileTap={{scale:0.9}}>  
    Resume
   </motion.h3>
@@ -286,29 +290,87 @@ animate={{
   >
    My Work
   </motion.h3>
+
+
  </Work>
 			<LogoPage theme={click?'dark':'light'}/>
 
       <BottomBar>
 
-<     About  to= {'/about'} click={click} >
+     <About  to= {'/about'} click={click} >
+       <motion.h3
+
+        initial={{
+        y:200,
+        transition:{type:'spring', duration:1.5, delay:1}
+
+          }}
+        animate={{
+        y:0,
+      transition: {type:'spring', duration:1.5, delay:1}
+          }}
+         whileHover={{scale:1.2}}
+         whileTap={{scale:0.9}}>
+          
+        </motion.h3>
+
+
         <motion.h3
+         initial={{
+        y:200,
+          transition:{type:'spring', duration:1.5, delay:1}
 
-initial={{
-  y:200,
-  transition:{type:'spring', duration:1.5, delay:1}
-
-}}
-animate={{
-  y:0,
-  transition: {type:'spring', duration:1.5, delay:1}
-}}
+          }}
+          animate={{
+          y:0,
+        transition: {type:'spring', duration:1.5, delay:1}
+          }}
          whileHover={{scale:1.2}}
          whileTap={{scale:0.9}}>
             About
         </motion.h3>
 
       </About>
+     <ContactMe  to= {'/contact'} click={click} >
+       <motion.h3
+
+        initial={{
+        y:200,
+        transition:{type:'spring', duration:1.5, delay:1}
+
+          }}
+        animate={{
+        y:0,
+      transition: {type:'spring', duration:1.5, delay:1}
+          }}
+         whileHover={{scale:1.2}}
+         whileTap={{scale:0.9}}>
+          
+        </motion.h3>
+
+
+        <motion.h3
+         initial={{
+        y:200,
+          transition:{type:'spring', duration:1.5, delay:1}
+
+          }}
+          animate={{
+          y:0,
+        transition: {type:'spring', duration:1.5, delay:1}
+          }}
+         whileHover={{scale:1.2}}
+         whileTap={{scale:0.9}}>
+           CONTACT ME
+           <GrContact/>
+        </motion.h3>
+
+      </ContactMe>
+
+
+
+
+
       <MySkills  to= {'/skills'} >
         <motion.h3
 

@@ -15,6 +15,7 @@ import About from "./components/About"
 import { AnimatePresence } from "framer-motion"
 import MusicBar from "./SmallComponents/MusicBar"
 import Contactform from "./components/Contactform"
+import PowerButton from '../src/SmallComponents/PowerButton'
 
 //const LazyAbout = React.lazy(()=>import('./components/About'))
 
@@ -23,7 +24,7 @@ function App() {
   return <>
   <GlobalStyle/>
   <ThemeProvider theme={lightTheme} >
-    
+  <PowerButton/>
     <MusicBar 
     
     />

@@ -94,7 +94,7 @@ const About = () => {
        <Container>
        <Logo theme={'dark'}/>
         <SocialIcons theme={'dark'}/>
-        <PowerButton/>
+        
         <ParticlesComponent theme ='dark'  />
        
        <MeFloating>

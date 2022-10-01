@@ -67,24 +67,7 @@ position: fixed;
 right:2rem;
 bottom: 2rem;
 z-index:1;
-${mediaQueries(40)`
-     width:60px;
-         height:60px;   
-       svg{
-         width:60px;
-         height:60px;
-       }
 
-  `};
-  ${mediaQueries(25)`
-        width:50px;
-         height:50px;
-        svg{
-         width:50px;
-         height:50px;
-       }
-
-  `};
 `
 
 
@@ -136,16 +119,16 @@ const WorkPage = () => {
       }, [])
 
 
-    return (
+  return (
         <ThemeProvider theme={darkTheme}>
           <Suspense fallback={<Loading />}>
-<Box>
+              <Box>
 
-<Logo theme='dark'/>
-<SocialIcons theme='dark'/>
-<PowerButton />
+                 <Logo theme='dark'/>
+               <SocialIcons theme='dark'/>
+               <PowerButton />
 
-     <Main ref={ref}   variants={container} initial='hidden' animate='show'  >
+          <Main ref={ref}   variants={container} initial='hidden' animate='show'  >
          {
             Work.map( d => 
             <Card key={d.id} data={d} />

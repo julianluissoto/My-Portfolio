@@ -163,6 +163,11 @@
     transform: translate(-50%, 0) rotate(360deg);
 }
 
+
+
+
+
+
 .ferrisWheelItemPivot {
     animation: ferrisWheelItemPivotSpin 140s infinite linear;
 }
@@ -385,7 +390,7 @@
     top: 50%;
     left: 50%;
     font-size: 2rem;
-    transform: translate(-50%, -50%) scale(1);
+    transform: rotate(-50%, -50%) scale(1);
     /* transition: opacity 200ms, visibility 200ms, transform 200ms; */
 }
 

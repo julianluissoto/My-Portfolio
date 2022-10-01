@@ -2,7 +2,7 @@ export const Work = [
     {
         id:1,
         name:"Dogs Breed App",
-        description:"It is build on top of the React and Redux for the Frontend, with pure Cs, Express and PostgreSQL for backend and Database",
+        description:"It is build on top of the React and Redux for the Frontend, with pure CSS, Express and PostgreSQL for backend and Database",
         tags:["React",'NodeJS',"Express","PostgreSQL",'Sequelize'],
         
         demo:"https://pi-dogs-henry-ashen.vercel.app/",

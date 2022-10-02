@@ -75,6 +75,7 @@ const FormTextArea = styled.textarea`
 const Button = styled.button`
     width: 100%;
     padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
     background-color: #2ecc71;
     color: #fff;
     font-size: 1.1rem;
@@ -82,13 +83,13 @@ const Button = styled.button`
     outline: none;
     cursor: pointer;
     transition: .3s;
-
-
-& :hover {
-    background-color: #27ae60;
+&:disabled{
+  background-color:rgba(57, 39, 39, 0.6);
+}
+&:enabled{
+  background-color: #07692f;
 }
 `
-
 
 const Contactform = () => {
     const [status, setStatus] = useState('');
@@ -123,7 +124,7 @@ const Contactform = () => {
         setValues({
           fullName: '',
           email: '',
-          role: '',
+          
           sending:'',
           message: ''
         });
@@ -135,7 +136,7 @@ const Contactform = () => {
               fullName: '',
               sending: '',
               email: '',
-              role: '',
+              
               message: ''
             });
             setStatus('SUCCESS');
@@ -172,7 +173,7 @@ const Contactform = () => {
 				
 				
 				<FormTextArea  value = {values.message ||''}  onChange={handlechange} placeholder="Your message here" name="message" />
-				<Button type="submit" >
+				<Button   disabled= {!values.fullName || !values.email || !values.message}  type="submit" >
         {values.sending?'Sending':'Send'}
                 </Button>
         {status && renderAlert()}

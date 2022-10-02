@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import emailjs from'emailjs-com'
-
-
 import './contact.css'
 import './loader.css'
 

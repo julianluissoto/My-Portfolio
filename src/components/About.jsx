@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import styled, { keyframes, ThemeProvider } from 'styled-components'
 import { darkTheme , mediaQueries} from './Themes'
-import PowerButton from '../SmallComponents/PowerButton'
+
 import Logo from '../SmallComponents/Logo'
 import SocialIcons from '../SmallComponents/SocialIcons'
 

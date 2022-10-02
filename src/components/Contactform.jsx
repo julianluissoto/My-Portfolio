@@ -169,10 +169,12 @@ const Contactform = () => {
 			<FormBody >
 				<h2 className='title'>Contact Me</h2>
 				<InputForm   value={values.fullName||''}  onChange={handlechange} name="fullName" type="text" placeholder="Your name" />
+        {!values.fullName && fillInputs('name')}
 				<InputForm   value={values.email||''}   onChange={handlechange} name="email" type="email" placeholder="Your E-mail" />
-				
+				{!values.email && fillInputs('E-mail')}
 				
 				<FormTextArea  value = {values.message ||''}  onChange={handlechange} placeholder="Your message here" name="message" />
+        {!values.message && fillInputs('Message')}
 				<Button   disabled= {!values.fullName || !values.email || !values.message}  type="submit" >
         {values.sending?'Sending':'Send'}
                 </Button>
@@ -191,6 +193,15 @@ const Contactform = () => {
     
 }
 export default Contactform
+
+const fillInputs = (e)=>{
+return (
+  <p style={{color:'red', fontWeight:'bold'}} >
+{`${e} cannot be empty`}
+  </p>
+)
+
+}
 const renderAlert = () => {
     return (<div  >
       <p style={{color:'green', fontWeight:'bold'}}>Your message submitted successfully</p>

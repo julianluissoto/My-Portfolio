@@ -23,6 +23,7 @@ transition: all 0.2s ease;
 background-color: ${props => props.theme.body};
 color:${props => props.theme.text};
 border: 1px solid ${props => props.theme.text};
+z-index: 10;
 }
 `
 const Title = styled.h2`
@@ -102,19 +103,19 @@ const Card = (props) => {
             </Description>
             <Tags>
             {
-                    tags.map((t,id) => {
+            tags.map((t,id) => {
                         return <Tag key={id}>#{t}</Tag>
                     })
                 }
             </Tags>
             <Footer>
-                <Link to={{pathname: `${demo}`}} target="_blank">
-                    Visit
-                </Link>
-                <Git to={{pathname: `${github}`}} target="_blank">
-                    <Github width={30} height={30} />
-                </Git>
-            </Footer>
+        <Link to={{ pathname: `${demo}` }} target="_blank">
+          Visit
+        </Link>
+        <Git to={{ pathname: `${github}` }} target="_blank">
+          <Github width={30} height={30} />
+        </Git>
+      </Footer>
         </Box>
     )
 }

@@ -61,12 +61,12 @@ ${mediaQueries(50)`
   `};
 
 `
-const Rotate = styled.span`
+const Rotate = styled.div`
 display:block;
 position: fixed;
 right:2rem;
-bottom: 2rem;
-z-index:1;
+bottom: 1rem;
+z-index:0;
 
 `
 
@@ -130,24 +130,24 @@ const WorkPage = () => {
 
           <Main ref={ref}   variants={container} initial='hidden' animate='show'  >
          {
-            Work.map( d => 
+            Work.map( (d) =>( 
             <Card key={d.id} data={d} />
-            )
-         }
+            ))}
+         
      </Main>
+      <Rotate ref= {rack}>
+  
+  <Riel  />
+  
+
+</Rotate >
+ 
+
 <Rotate ref= {gear}>
   <div ><BsGearWideConnected   style={{fill:`${darkTheme.text}`, width:'100px', height:'100px', bottom:'30px'}}/></div>
 
-</Rotate >
-<Rotate ref= {rack}>
-  <div >
-    <Riel  />
-    </div>
-  
-  
-  
-
-</Rotate >
+  </Rotate >
+    
      <PageTitle text='My Work' top='10%' right = '10%' />
         </Box>
       

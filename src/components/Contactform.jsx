@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import emailjs from'emailjs-com'
 import './contact.css'
-import './loader.css'
+
 
 
 
@@ -84,7 +84,7 @@ const Contactform = () => {
 				
 				
 				<textarea className="field" value = {values.message ||''}  onChange={handlechange} placeholder="Your message here" name="message" />
-				<button type="submit"   className="btn">{values.sending?'Sending':'Send'}</button>
+				<button type="submit"   className="btn-submit">{values.sending?'Sending':'Send'}</button>
                 {status && renderAlert()}
 			</div>
 		</form  >

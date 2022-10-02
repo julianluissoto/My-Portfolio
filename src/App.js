@@ -4,30 +4,29 @@ import GlobalStyle from "./globalStyles"
 import {lightTheme} from './components/Themes'
 import { Switch, Route, useLocation} from "react-router-dom"
 
-//components
+
 import Main from './components/Main'
-//import About from "./components/About"
+
 import BlogPage from "./components/BlogPage"
 import MyWorks from "./components/MyWorks"
 import MySkills from "./components/MySkills"
 
 import About from "./components/About"
 import { AnimatePresence } from "framer-motion"
-import MusicBar from "./SmallComponents/MusicBar"
 import Contactform from "./components/Contactform"
 import PowerButton from '../src/SmallComponents/PowerButton'
 
-//const LazyAbout = React.lazy(()=>import('./components/About'))
+
 
 function App() {
+  
   const location = useLocation()
   return <>
   <GlobalStyle/>
   <ThemeProvider theme={lightTheme} >
   <PowerButton/>
-    <MusicBar 
-    
-    />
+
+ 
 <AnimatePresence exitBeforeEnter >
 
 <Switch location={location}  key={location.pathname}  >

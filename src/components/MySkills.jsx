@@ -2,7 +2,6 @@ import React from 'react'
 import { motion } from "framer-motion";
 import styled, { ThemeProvider } from 'styled-components'
 import { lightTheme,mediaQueries } from './Themes'
-import PowerButton from '../SmallComponents/PowerButton'
 import Logo from '../SmallComponents/Logo'
 import SocialIcons from '../SmallComponents/SocialIcons'
 import {BiServer} from 'react-icons/bi'
@@ -120,7 +119,7 @@ const MySkills = () => {
          My Skills
       </SkillsTitle> */}
         <Box>
-        <PowerButton/>
+       
         <SocialIcons theme={'light'}/>
         <Logo theme={'light'}/>
         <ParticlesComponent  theme={'light'}/>

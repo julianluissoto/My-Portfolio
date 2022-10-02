@@ -59,7 +59,7 @@ margin:0 0.1rem;
 
 `
 
-const MusicBar = () => {
+const MusicBar = (show) => {
   const ref = useRef(null)
   const [click, setClick] = useState(false)
   const handleMusic = ()=>{
@@ -75,22 +75,26 @@ else{
   }
   return (
     <>
-    <Container onClick={handleMusic}>
-    <AiFillSound style={{width:'1.5rem', height:'1.5rem',top:'1rem'}}/>
-      <Line click={click}/>
-      <Line click={click}/>
-      <Line click={click}/>
-      <Line click={click}/>
-      <Line click={click} />
-      
-      <img  style={{height:'90px', right:'0.5rem', top:'0.5rem', position:'fixed'}}   src={click?dancerMoving:dancerStatic} alt="dancig-men" />
-        
-      
-      <audio src={music} ref={ref} loop />
-      
-        
-        
-    </Container>
+    {show.show&& 
+     <Container onClick={handleMusic}>
+     <AiFillSound style={{width:'1.5rem', height:'1.5rem',top:'1rem'}}/>
+       <Line click={click}/>
+       <Line click={click}/>
+       <Line click={click}/>
+       <Line click={click}/>
+       <Line click={click} />
+       
+       <img  style={{height:'90px', right:'0.5rem', top:'0.5rem', position:'fixed'}}   src={click?dancerMoving:dancerStatic} alt="dancig-men" />
+         
+       
+       <audio src={music} ref={ref} loop />
+       
+         
+         
+     </Container>
+    
+    }
+   
     
     </>
     

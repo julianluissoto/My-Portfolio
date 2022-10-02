@@ -12,6 +12,7 @@ import {motion} from 'framer-motion'
 import {GrContact} from 'react-icons/gr'
 import {BsGearWideConnected} from 'react-icons/bs'
 import { mediaQueries } from './Themes';
+import MusicBar from '../SmallComponents/MusicBar'
 
 const MainContainer = styled.div`
     background-color: ${props => props.theme.body};
@@ -148,7 +149,7 @@ return (
       <DarkDivContainer  click={click}>
       </DarkDivContainer>
 			<Container>
-			
+      <MusicBar show ={true}/>
 			<SocialIcons theme = {click?'dark': 'light'} />
       <BsGearWideConnected  
       click={click}  onClick={handleClick}
@@ -167,8 +168,8 @@ return (
       <CenterLogo click={click}  onClick={handleClick}>
 
     <div className="ferrisWheelInner">
-      <BsGearWideConnected  className={click?"ferrisWheelImageSmall":"ferrisWheelImage"} /* style={{fill:`${lightTheme.text}`, width:'100px', height:'100px'}} *//>
-      {click?'':<h2 style={{display:'flex', justifyContent:"center", fontWeight:'bold'}}>Lets Go</h2>}
+      <BsGearWideConnected  className={click?"ferrisWheelImageSmall":"ferrisWheelImage"} />
+     
       <ol className="ferrisWheelList" >
         <li className="ferrisWheelItem"  >
           <div className="ferrisWheelItemPivot">
@@ -391,7 +392,7 @@ animate={{
       </MySkills>
      </BottomBar>
   </Container>
-{click?<Intro  click={click} />:null}
+{click?<Intro  click={click} />:undefined}
 </MainContainer>
   )
 }

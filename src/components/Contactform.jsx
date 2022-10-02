@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import emailjs from'emailjs-com'
-import './contact.css'
+import { mediaQueries } from './Themes';
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -13,7 +13,19 @@ align-items: center;
 padding: 100px 100px;
 margin: auto;
 
-`;
+${mediaQueries(50)`
+            padding: 150px 0;
+
+  `};
+
+  ${mediaQueries(30)`
+                       padding: 150px 0;
+
+              
+
+  `};
+
+`
 const Form = styled.form`
 max-width: 500px;
 
@@ -80,12 +92,15 @@ const Button = styled.button`
 
 const Contactform = () => {
     const [status, setStatus] = useState('');
+    
     useEffect(() => {
         if(status === 'SUCCESS') {
           setTimeout(() => {
             setStatus('');
           }, 3000);
         }
+        
+        
       }, [status]);
       
     const [values, setValues] = useState({
@@ -146,11 +161,11 @@ const Contactform = () => {
   return (
    
 
-<Container /* className="container" */>
+<Container >
 
-		<Form /* className="contact-box" */ onSubmit={handleSubmit}>
+		<Form  onSubmit={handleSubmit}>
 			
-			<FormBody /* className="right" */>
+			<FormBody >
 				<h2 className='title'>Contact Me</h2>
 				<InputForm   value={values.fullName||''}  onChange={handlechange} name="fullName" type="text" placeholder="Your name" />
 				<InputForm   value={values.email||''}   onChange={handlechange} name="email" type="email" placeholder="Your E-mail" />

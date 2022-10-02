@@ -15,7 +15,7 @@ import Loading from "../SmallComponents/Loading";
 import Riel from '../SmallComponents/Riel';
 
 const SocialIcons = lazy(() => import("../SmallComponents/SocialIcons"));
-const PowerButton = lazy(() => import("../SmallComponents/PowerButton"));
+
 const Logo = lazy(() => import("../SmallComponents/Logo"));
 const PageTitle = lazy(() => import("../SmallComponents/PageTitle"));
 
@@ -126,7 +126,7 @@ const WorkPage = () => {
 
                  <Logo theme='dark'/>
                <SocialIcons theme='dark'/>
-               <PowerButton />
+               
 
           <Main ref={ref}   variants={container} initial='hidden' animate='show'  >
          {

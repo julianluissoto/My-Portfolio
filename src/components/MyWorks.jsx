@@ -115,23 +115,19 @@ const WorkPage = () => {
               <Card key={d.id} data={d} />
             ))}
           </Main>
-          <div></div>
-          <div></div>
-          <Rotate ref={rack}>
-            <Riel />
-          </Rotate>
 
           <Rotate ref={gear}>
-            <div>
-              <BsGearWideConnected
-                style={{
-                  fill: `${darkTheme.text}`,
-                  width: "100px",
-                  height: "100px",
-                  bottom: "30px",
-                }}
-              />
-            </div>
+            <BsGearWideConnected
+              style={{
+                fill: `${darkTheme.text}`,
+                width: "100px",
+                height: "100px",
+                /* bottom: "200px",  */
+              }}
+            />
+          </Rotate>
+          <Rotate ref={rack}>
+            <Riel />
           </Rotate>
 
           <PageTitle text="My Work" top="10%" right="10%" />

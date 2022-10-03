@@ -8,11 +8,11 @@ function Riel() {
           zIndex: "-5",
           fill: "white",
 
-          transform: "translateX(800px) rotate(180deg) translateY(-5px) ",
+          transform: "translateX(800px)  translateY(-5px) ",
         }}
         xmlns="http://www.w3.org/2000/svg"
         width="1000"
-        height="200"
+        height="100"
         version="1"
         viewBox="0 0 8880 270"
       >

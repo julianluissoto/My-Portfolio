@@ -115,6 +115,8 @@ const WorkPage = () => {
               <Card key={d.id} data={d} />
             ))}
           </Main>
+          <div></div>
+          <div></div>
           <Rotate ref={rack}>
             <Riel />
           </Rotate>

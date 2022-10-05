@@ -3,7 +3,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Github } from "../AllSvg";
-
+import Riel from "../SmallComponents/Riel";
 const Box = styled(motion.li)`
   width: 16rem;
   height: 40vh;
@@ -108,6 +108,7 @@ const Card = (props) => {
         <Git to={{ pathname: `${github}` }} target="_blank">
           <Github width={30} height={30} />
         </Git>
+        <Riel />
       </Footer>
     </Box>
   );

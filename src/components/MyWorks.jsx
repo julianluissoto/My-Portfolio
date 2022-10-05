@@ -12,7 +12,6 @@ import { BsGearWideConnected } from "react-icons/bs";
 /* import PageTitle from '../SmallComponents/PageTitle'; */
 import Loading from "../SmallComponents/Loading";
 /* import { Riel } from '../AllSvg'; */
-import Riel from "../SmallComponents/Riel";
 
 const SocialIcons = lazy(() => import("../SmallComponents/SocialIcons"));
 
@@ -126,9 +125,7 @@ const WorkPage = () => {
               }}
             />
           </Rotate>
-          <Rotate ref={rack}>
-            <Riel />
-          </Rotate>
+          <Rotate ref={rack}></Rotate>
 
           <PageTitle text="My Work" top="10%" right="10%" />
         </Box>

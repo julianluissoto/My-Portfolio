@@ -35,8 +35,9 @@
 
 @keyframes gearImageSpin2 {
     100% {
-        transform: rotate(-360deg);
+        transform: rotate(-360deg) ;
     }
+    
 }
 
 @media only screen and (min-width:800px) {
@@ -60,19 +61,31 @@
 
 }
 
+@keyframes gearImageSpin {
+
+    0% {
+        transform: rotate(-180deg) scale(1.1) ;
+    }
+    25% {
+        transform: rotate(-360deg) scale(1.3) ;
+    }
+    50% {
+        transform: rotate(-720deg) scale(1.3) ;
+    }
+    100% {
+        transform: rotate(-960deg) scale(1.1) ;
+    }
+}
 
 .ferrisWheelImage {
     width: 8rem;
     height: 8rem;
     border-radius: 20px;
-    animation: gearImageSpin 10s infinite linear
+    animation: gearImageSpin 10s infinite ease-in-out;
+    
 }
 
-@keyframes gearImageSpin {
-    100% {
-        transform: rotate(-360deg);
-    }
-}
+
 
 .ferrisWheelImageSmall {
     width: 5rem;

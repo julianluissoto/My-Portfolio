@@ -207,7 +207,9 @@ export default Contactform;
 
 const fillInputs = (e) => {
   return (
-    <p style={{ color: "red", fontWeight: "bold" }}>{`${e} cannot be empty`}</p>
+    <p
+      style={{ color: "orange", fontWeight: "bold" }}
+    >{`${e} cannot be empty`}</p>
   );
 };
 const renderAlert = () => {

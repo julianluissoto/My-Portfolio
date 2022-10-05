@@ -148,6 +148,7 @@ const Main = () => {
   const handleClick = () => {
     setclick(!click);
   };
+
   return (
     <MainContainer>
       <DarkDivContainer click={click}></DarkDivContainer>
@@ -346,6 +347,7 @@ const Main = () => {
               </li>
             </ol>
           </div>
+          <div></div>
         </CenterLogo>
         <Resume
           target={"_blank"}

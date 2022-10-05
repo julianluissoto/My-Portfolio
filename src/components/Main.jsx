@@ -349,7 +349,13 @@ const Main = () => {
           </div>
           <div></div>
         </CenterLogo>
-        <Resume target={"_blank"} style={{ color: "black" }} to={resume}>
+
+        <Resume
+          target={"_blank"}
+          style={{ color: "black" }}
+          to={resume}
+          download
+        >
           <motion.h3
             initial={{
               y: -200,

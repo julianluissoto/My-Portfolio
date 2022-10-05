@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 import { TbBrandJavascript } from "react-icons/tb";
 import LogoPage from "../SmallComponents/Logo";
-
+import resume from "../assets/resume/Front End Developer Julian Soto.pdf";
 import SocialIcons from "../SmallComponents/SocialIcons";
 import { NavLink } from "react-router-dom";
 import "./main.css";
@@ -349,14 +349,7 @@ const Main = () => {
           </div>
           <div></div>
         </CenterLogo>
-        <Resume
-          target={"_blank"}
-          style={{ color: "black" }}
-          to={{
-            pathname:
-              "https://drive.google.com/file/d/19dxmTt4vi2KXa7p1lWZ8NHdyFEus-Kbb/view?usp=sharing",
-          }}
-        >
+        <Resume target={"_blank"} style={{ color: "black" }} to={resume}>
           <motion.h3
             initial={{
               y: -200,

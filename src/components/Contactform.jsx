@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { mediaQueries } from "./Themes";
 import styled from "styled-components";
-
+import Confetti from "react-dom-confetti";
 const Container = styled.div`
   position: relative;
 
@@ -88,6 +88,20 @@ const Button = styled.button`
   }
 `;
 
+const config = {
+  angle: 90,
+  spread: 360,
+  startVelocity: 40,
+  elementCount: 150,
+  dragFriction: 0.12,
+  duration: "5510",
+  stagger: 4,
+  width: "15px",
+  height: "15px",
+  perspective: "450px",
+  colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a", "#d91139"],
+};
+
 const Contactform = () => {
   const [status, setStatus] = useState("");
 
@@ -108,7 +122,8 @@ const Contactform = () => {
 
   const handleSubmit = (e) => {
     setValues({
-      sending: true,
+      ...values,
+      sending: " ",
     });
     e.preventDefault();
 
@@ -118,7 +133,6 @@ const Contactform = () => {
         setValues({
           fullName: "",
           email: "",
-
           sending: "",
           message: "",
         });
@@ -129,8 +143,7 @@ const Contactform = () => {
           setValues({
             fullName: "",
             sending: "",
-            email: "",
-
+            email: " ",
             message: "",
           });
           setStatus("SUCCESS");
@@ -142,11 +155,23 @@ const Contactform = () => {
   };
 
   const handlechange = (e) => {
+    //let expReg = /^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$/.test(e.target.value)
+
     setValues((values) => ({
       ...values,
 
       [e.target.name]: e.target.value,
     }));
+  };
+  const handlechangeName = (e) => {
+    let expRegName = /^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$/g.test(e.target.value);
+
+    if (expRegName) {
+      setValues((values) => ({
+        ...values,
+        [e.target.name]: e.target.value,
+      }));
+    }
   };
 
   return (
@@ -156,7 +181,7 @@ const Contactform = () => {
           <h2 className="title">Contact Me</h2>
           <InputForm
             value={values.fullName || ""}
-            onChange={handlechange}
+            onChange={handlechangeName}
             name="fullName"
             type="text"
             placeholder="Your name"
@@ -170,22 +195,21 @@ const Contactform = () => {
             placeholder="Your E-mail"
           />
           {!values.email && fillInputs("E-mail")}
-
           <FormTextArea
             rows="5"
             minlength="50"
-            value={values.message || ""}
+            value={values.message || " "}
             onChange={handlechange}
             placeholder="Your message here"
             name="message"
           />
-
           {values.message.length < 50 && (
             <p style={{ color: "orange", fontWeight: "bold" }}>
               message has to contain min 50 character
             </p>
           )}
           <br></br>
+          <Confetti active={status} config={config} />
           <Button
             disabled={
               !values.fullName ||

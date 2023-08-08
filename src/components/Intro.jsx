@@ -204,7 +204,7 @@ const Intro = (props) => {
             <BoxText>
                 <h1>  Hi </h1>
                 <h2>I'm Julian</h2>
-                <h3>Front-End Developer</h3>
+                <h3>Full stack Developer</h3>
             </BoxText>
          </SubBox>
          <SubBox  >

@@ -144,7 +144,7 @@ const DarkDivContainer = styled.div`
 `;
 
 const Main = () => {
-  const [click, setclick] = useState(false);
+  const [click, setclick] = useState(true);
   const handleClick = () => {
     setclick(!click);
   };

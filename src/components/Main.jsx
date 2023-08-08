@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 import { TbBrandJavascript } from "react-icons/tb";
 import LogoPage from "../SmallComponents/Logo";
-import resume from "../assets/resume/Full%20Stack%20React%20Node%20Julian%20Soto.pdf";
+//import resume from "../assets/resume/Full%20Stack%20React%20Node%20Julian%20Soto.pdf";
 import SocialIcons from "../SmallComponents/SocialIcons";
 import { NavLink } from "react-router-dom";
 import "./main.css";
@@ -350,7 +350,7 @@ const Main = () => {
           <div></div>
         </CenterLogo>
 
-        <Resume
+*/<Resume
           target={"_blank"}
           style={{ color: "black" }}
           to={resume}
@@ -370,7 +370,7 @@ const Main = () => {
           >
             Resume
           </motion.h3>
-        </Resume>
+        </Resume>/*
         <Work to={"/work"} click={click}>
           <motion.h3
             initial={{

@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 import { TbBrandJavascript } from "react-icons/tb";
 import LogoPage from "../SmallComponents/Logo";
-import resume from "../assets/resume/Full-Stack-React-Node-Julian.pdf";
+import resume from "../assets/resume/Full%20Stack%20React%20Node%20Julian.pdf";
 import SocialIcons from "../SmallComponents/SocialIcons";
 import { NavLink } from "react-router-dom";
 import "./main.css";

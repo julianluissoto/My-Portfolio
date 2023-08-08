@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 import { TbBrandJavascript } from "react-icons/tb";
 import LogoPage from "../SmallComponents/Logo";
-import resume from "../assets/resume/Front End Developer Julian Soto.pdf";
+import resume from "../assets/resume/Full Stack React Node Julian Soto.pdf";
 import SocialIcons from "../SmallComponents/SocialIcons";
 import { NavLink } from "react-router-dom";
 import "./main.css";

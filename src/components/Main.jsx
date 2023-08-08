@@ -350,12 +350,13 @@ const Main = () => {
           <div></div>
         </CenterLogo>
 
-*/<Resume
+/*Resume
           target={"_blank"}
           style={{ color: "black" }}
           to={resume}
           download
         >
+  
           <motion.h3
             initial={{
               y: -200,
@@ -370,7 +371,7 @@ const Main = () => {
           >
             Resume
           </motion.h3>
-        </Resume>/*
+        </Resume>*/
         <Work to={"/work"} click={click}>
           <motion.h3
             initial={{
